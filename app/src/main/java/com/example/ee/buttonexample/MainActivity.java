@@ -19,11 +19,9 @@ public class MainActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.button2);
         tView = (TextView) findViewById(R.id.textView2);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tView.setText(R.string.output);
-            }
-        });
+    }
+
+    public void clickable(View v){
+        tView.setText(R.string.output);
     }
 }
