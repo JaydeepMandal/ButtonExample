@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tView.setText("What do you want?");
+                tView.setText(R.string.output);
             }
         });
     }
