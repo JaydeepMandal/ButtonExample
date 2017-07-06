@@ -1,12 +1,12 @@
 package com.example.ee.buttonexample;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity implements View.OnClickListener {
 
     Button btn;
     TextView tView;
@@ -19,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.button2);
         tView = (TextView) findViewById(R.id.textView2);
 
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                tView.setText(R.string.output);
-            }
-        });
+        btn.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        tView.setText(R.string.output);
     }
 }
